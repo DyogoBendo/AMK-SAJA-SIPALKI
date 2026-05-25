@@ -35,11 +35,28 @@ function App() {
   const whatsappLink = "https://wa.me/5545998345874?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20de%20Sipalki";
 
   return (
-    <div className="font-body text-amk-white bg-amk-black min-h-screen">
+    <div className="font-body text-amk-white bg-amk-black min-h-screen pt-20">
       
+      {/* 1. MENU DE NAVEGAÇÃO FIXO (RF05) */}
+      <header className="fixed top-0 left-0 w-full bg-amk-black/95 border-b-2 border-amk-red z-50 shadow-lg backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+          <div className="font-heading font-bold text-2xl text-amk-white tracking-widest uppercase">
+            <span className="text-amk-red">AMK</span> SAJA
+          </div>
+          <nav className="hidden md:flex gap-8 font-heading font-bold uppercase text-sm">
+            <a href="#sobre" className="hover:text-amk-red transition-colors">Sobre</a>
+            <a href="#modalidades" className="hover:text-amk-red transition-colors">Modalidades</a>
+            <a href="#inclusao" className="hover:text-amk-red transition-colors">Inclusão</a>
+            <a href="#horarios" className="hover:text-amk-red transition-colors">Horários</a>
+            <a href="#localizacao" className="hover:text-amk-red transition-colors">Contato</a>
+          </nav>
+        </div>
+      </header>
+
       {/* HERO SECTION */}
       <section 
-        className="text-center py-40 px-4"
+        id="inicio"
+        className="text-center py-32 md:py-40 px-4"
         style={{
           background: "linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('http://googleusercontent.com/image_collection/image_retrieval/5425318889590930133') center/cover no-repeat"
         }}
@@ -56,9 +73,10 @@ function App() {
         </a>
       </section>
 
-      {/* NOSSA FILOSOFIA */}
-      <section className="py-20 px-4 max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+      {/* NOSSA FILOSOFIA & LIDERANÇA */}
+      {/* Adicionado o id="sobre" para o menu funcionar */}
+      <section id="sobre" className="py-20 px-4 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-10 items-center mb-20">
           <div>
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-amk-white mb-10 border-b-4 border-amk-red inline-block pb-2 uppercase">
               Nossa Filosofia
@@ -78,10 +96,7 @@ function App() {
             <img src={imgSipalki} alt="Prática de Sipalki" className="w-full h-full object-cover block" />
           </div>
         </div>
-      </section>
 
-      {/* LIDERANÇA */}
-      <section className="py-20 px-4 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="rounded-full shadow-[0_0_30px_rgba(211,17,24,0.3)] border-[5px] border-amk-red w-72 h-72 md:w-[400px] md:h-[400px] mx-auto overflow-hidden">
               <img src={imgMestre} alt="Master André Cheiran" className="w-full h-full object-cover" />
@@ -126,7 +141,8 @@ function App() {
       </section>
 
       {/* NOSSAS MODALIDADES */}
-      <section className="py-20 px-4 max-w-7xl mx-auto text-center md:text-left">
+      {/* Adicionado o id="modalidades" para o menu funcionar */}
+      <section id="modalidades" className="py-20 px-4 max-w-7xl mx-auto text-center md:text-left">
         <h2 className="font-heading font-bold text-3xl md:text-4xl text-amk-white mb-12 border-b-4 border-amk-red inline-block pb-2 uppercase">
           Nossas Modalidades
         </h2>
@@ -145,7 +161,8 @@ function App() {
       </section>
 
       {/* INCLUSÃO */}
-      <section className="bg-white text-amk-black py-20 mt-10 border-y-4 border-amk-blue">
+      {/* Adicionado o id="inclusao" para o menu funcionar */}
+      <section id="inclusao" className="bg-white text-amk-black py-20 mt-10 border-y-4 border-amk-blue">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-amk-black mb-5 border-b-4 border-amk-blue inline-block pb-2 uppercase">
@@ -191,16 +208,18 @@ function App() {
         </div>
       </section>
 
-      {/* GRADE DE HORÁRIOS */}
-      <section className="py-20 px-4 max-w-7xl mx-auto">
+      {/* 2. GRADE DE HORÁRIOS - SEGMENTADA POR PÚBLICO ALVO (RF02) */}
+      <section id="horarios" className="py-20 px-4 max-w-7xl mx-auto">
         <h2 className="font-heading font-bold text-3xl md:text-4xl text-amk-white mb-10 border-b-4 border-amk-red inline-block pb-2 uppercase">
           Grade de Horários
         </h2>
         <div className="overflow-x-auto mt-5">
           <table className="w-full border-collapse text-left">
             <thead>
-              <tr className="bg-amk-red text-amk-white font-heading text-lg">
+              <tr className="bg-amk-red text-amk-white font-heading text-lg whitespace-nowrap">
                 <th className="p-5">Dia da Semana</th>
+                {/* Nova coluna de Público-Alvo adicionada */}
+                <th className="p-5">Público-Alvo / Turma</th>
                 <th className="p-5">Kwon Bop</th>
                 <th className="p-5">Sipalki-Do</th>
                 <th className="p-5">Gumkido</th>
@@ -209,18 +228,24 @@ function App() {
             <tbody className="text-lg">
               <tr className="border-b border-gray-800">
                 <td className="p-5">Terça-feira</td>
+                {/* Linha adicionada especificando a turma */}
+                <td className="p-5 text-gray-400 font-bold">Turma Mista / Iniciantes</td>
                 <td className="p-5">19:00</td>
                 <td className="p-5 text-amk-red font-bold">20:00</td>
                 <td className="p-5">21:00</td>
               </tr>
               <tr className="bg-[#111] border-b border-gray-800">
                 <td className="p-5">Quinta-feira</td>
+                {/* Linha adicionada especificando a turma */}
+                <td className="p-5 text-gray-400 font-bold">Turma Mista / Avançados</td>
                 <td className="p-5">19:00</td>
                 <td className="p-5 text-amk-red font-bold">20:00</td>
                 <td className="p-5">21:00</td>
               </tr>
               <tr className="border-b border-gray-800">
                 <td className="p-5">Sábado</td>
+                {/* Linha adicionada especificando a turma */}
+                <td className="p-5 text-gray-400 font-bold">Turma Infantil / Inclusão</td>
                 <td className="p-5">16:00</td>
                 <td className="p-5 text-amk-red font-bold">17:00</td>
                 <td className="p-5">18:00</td>
@@ -231,7 +256,8 @@ function App() {
       </section>
 
       {/* ONDE ESTAMOS */}
-      <section className="py-20 px-4 max-w-7xl mx-auto">
+      {/* Adicionado o id="localizacao" para o menu funcionar */}
+      <section id="localizacao" className="py-20 px-4 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-amk-white mb-10 border-b-4 border-amk-red inline-block pb-2 uppercase">
@@ -273,9 +299,19 @@ function App() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="text-center py-10 bg-[#050505] text-[#777] text-sm">
-        <p>Sipalki Soo Bahk | AMK Saja Sipalki &copy; 2026</p>
+      {/* 3. FOOTER (RF06 - Redes Sociais Integradas ao Rodapé) */}
+      <footer className="flex flex-col items-center justify-center gap-4 py-12 bg-[#050505] text-[#777] text-sm border-t border-gray-900 mt-10">
+        <div className="flex items-center gap-6 mb-2">
+          <a href="https://instagram.com/amk.saja" target="_blank" rel="noopener noreferrer" 
+             className="text-gray-500 hover:text-amk-white transition-colors" aria-label="Siga-nos no Instagram">
+            <InstagramIcon className="w-8 h-8" />
+          </a>
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" 
+             className="text-gray-500 hover:text-amk-white transition-colors" aria-label="Fale conosco no WhatsApp">
+            <WhatsAppIcon className="w-8 h-8" />
+          </a>
+        </div>
+        <p className="font-heading uppercase tracking-wider text-xs">Sipalki Soo Bahk | AMK Saja Sipalki &copy; 2026</p>
       </footer>
 
     </div>
