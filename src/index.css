@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-amk-red: #D31118;
+  --color-amk-black: #0A0A0A;
+  --color-amk-white: #F8F9FA;
+  --color-amk-blue: #0033A0;
+  --color-amk-green: #22C55E;
+  --color-amk-surface: #151515;
+  
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Lato', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-amk-black);
+  color: var(--color-amk-white);
+}
+
+body {
+  font-family: var(--font-body);
+}
