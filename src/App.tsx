@@ -218,37 +218,19 @@ function App() {
             <thead>
               <tr className="bg-amk-red text-amk-white font-heading text-lg whitespace-nowrap">
                 <th className="p-5">Dia da Semana</th>
-                {/* Nova coluna de Público-Alvo adicionada */}
                 <th className="p-5">Público-Alvo / Turma</th>
                 <th className="p-5">Kwon Bop</th>
                 <th className="p-5">Sipalki-Do</th>
                 <th className="p-5">Gumkido</th>
               </tr>
             </thead>
-            <tbody className="text-lg">
+            <tbody className="text-lg">              
               <tr className="border-b border-gray-800">
-                <td className="p-5">Terça-feira</td>
-                {/* Linha adicionada especificando a turma */}
-                <td className="p-5 text-gray-400 font-bold">Turma Mista / Iniciantes</td>
-                <td className="p-5">19:00</td>
-                <td className="p-5 text-amk-red font-bold">20:00</td>
-                <td className="p-5">21:00</td>
-              </tr>
-              <tr className="bg-[#111] border-b border-gray-800">
-                <td className="p-5">Quinta-feira</td>
-                {/* Linha adicionada especificando a turma */}
-                <td className="p-5 text-gray-400 font-bold">Turma Mista / Avançados</td>
-                <td className="p-5">19:00</td>
-                <td className="p-5 text-amk-red font-bold">20:00</td>
-                <td className="p-5">21:00</td>
-              </tr>
-              <tr className="border-b border-gray-800">
-                <td className="p-5">Sábado</td>
-                {/* Linha adicionada especificando a turma */}
-                <td className="p-5 text-gray-400 font-bold">Turma Infantil / Inclusão</td>
-                <td className="p-5">16:00</td>
-                <td className="p-5 text-amk-red font-bold">17:00</td>
-                <td className="p-5">18:00</td>
+                <td className="p-5">Segunda a Sexta</td>
+                <td className="p-5 text-gray-400 font-bold">Turma Mista</td>
+                <td className="p-5 text-gray-600">-</td>
+                <td className="p-5 text-amk-red font-bold">19:00</td>
+                <td className="p-5 text-gray-600">-</td>
               </tr>
             </tbody>
           </table>
@@ -266,7 +248,7 @@ function App() {
             <h3 className="font-heading text-2xl text-amk-red mb-4 uppercase">Endereço</h3>
             <p className="flex items-start gap-4 text-gray-400 text-lg mb-8">
               <MapPin className="text-amk-red w-6 h-6 shrink-0 mt-1" />
-              Rua Belo Horizonte, 828, 2º Piso<br/>Jardim Laranjeiras, Foz do Iguaçu - PR
+              Rua Urai, 153<br/>Jardim São Roque
             </p>
             
             <h3 className="font-heading text-2xl text-amk-red mb-4 uppercase mt-8">Contato Direto</h3>
@@ -286,7 +268,7 @@ function App() {
           </div>
           <div className="rounded-lg overflow-hidden h-[350px] shadow-[10px_10px_0px_#D31118]">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.3787720973617!2d-54.57790588498453!3d-25.509094083751765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f691b000000001%3A0x1a8b940e791e847c!2sR.%20Belo%20Horizonte%2C%20828%20-%20Jardim%20das%20Laranjeiras%2C%20Foz%20do%20Igua%C3%A7u%20-%20PR!5e0!3m2!1spt-BR!2sbr!4v1680000000000!5m2!1spt-BR!2sbr" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8886.613958218037!2d-54.54272512382313!3d-25.550325877485356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f6913efb01b9fd%3A0xbc99ff881e2de9b9!2sR.%20Urai%2C%20153%20-%20S%C3%A3o%20Roque%2C%20Foz%20do%20Igua%C3%A7u%20-%20PR%2C%2085853-697!5e1!3m2!1spt-BR!2sbr!4v1780485334926!5m2!1spt-BR!2sbr" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
