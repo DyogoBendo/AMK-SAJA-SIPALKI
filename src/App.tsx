@@ -218,20 +218,61 @@ function App() {
             <thead>
               <tr className="bg-amk-red text-amk-white font-heading text-lg whitespace-nowrap">
                 <th className="p-5">Dia da Semana</th>
-                <th className="p-5">Público-Alvo / Turma</th>
                 <th className="p-5">Kwon Bop</th>
                 <th className="p-5">Sipalki-Do</th>
                 <th className="p-5">Gumkido</th>
               </tr>
             </thead>
-            <tbody className="text-lg">              
+            <tbody className="text-lg">
+              
+              {/* Segunda-feira */}
               <tr className="border-b border-gray-800">
-                <td className="p-5">Segunda a Sexta</td>
-                <td className="p-5 text-gray-400 font-bold">Turma Mista</td>
+                <td className="p-5">Segunda-feira</td>
                 <td className="p-5 text-gray-600">-</td>
                 <td className="p-5 text-amk-red font-bold">19:00</td>
                 <td className="p-5 text-gray-600">-</td>
               </tr>
+
+              {/* Terça-feira */}
+              <tr className="bg-[#111] border-b border-gray-800">
+                <td className="p-5">Terça-feira</td>
+                <td className="p-5">19:00</td>
+                <td className="p-5 text-amk-red font-bold">19:00 / 20:00</td>
+                <td className="p-5">21:00</td>
+              </tr>
+
+              {/* Quarta-feira */}
+              <tr className="border-b border-gray-800">
+                <td className="p-5">Quarta-feira</td>
+                <td className="p-5 text-gray-600">-</td>
+                <td className="p-5 text-amk-red font-bold">19:00</td>
+                <td className="p-5 text-gray-600">-</td>
+              </tr>
+
+              {/* Quinta-feira */}
+              <tr className="bg-[#111] border-b border-gray-800">
+                <td className="p-5">Quinta-feira</td>
+                <td className="p-5">19:00</td>
+                <td className="p-5 text-amk-red font-bold">19:00 / 20:00</td>
+                <td className="p-5">21:00</td>
+              </tr>
+
+              {/* Sexta-feira */}
+              <tr className="border-b border-gray-800">
+                <td className="p-5">Sexta-feira</td>
+                <td className="p-5 text-gray-600">-</td>
+                <td className="p-5 text-amk-red font-bold">19:00</td>
+                <td className="p-5 text-gray-600">-</td>
+              </tr>
+
+              {/* Sábado */}
+              <tr className="bg-[#111] border-b border-gray-800">
+                <td className="p-5">Sábado</td>
+                <td className="p-5">16:00</td>
+                <td className="p-5 text-amk-red font-bold">17:00</td>
+                <td className="p-5">18:00</td>
+              </tr>
+
             </tbody>
           </table>
         </div>
@@ -252,12 +293,17 @@ function App() {
             </p>
             
             <h3 className="font-heading text-2xl text-amk-red mb-4 uppercase mt-8">Contato Direto</h3>
-            <p className="flex items-center gap-4 text-gray-400 text-lg mb-2">
-              <WhatsAppIcon className="text-amk-red w-6 h-6" /> (45) 99834-5874
-            </p>
-            <p className="flex items-center gap-4 text-gray-400 text-lg mb-8">
-              <InstagramIcon className="text-amk-red w-6 h-6" /> @amk.saja
-            </p>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <p className="flex items-center gap-4 text-gray-400 text-lg mb-2">
+                <WhatsAppIcon className="text-amk-red w-6 h-6" /> (45) 99834-5874
+              </p>
+            </a>
+
+            <a href="https://instagram.com/amk.saja" target="_blank" rel="noopener noreferrer" >
+              <p className="flex items-center gap-4 text-gray-400 text-lg mb-8">
+                <InstagramIcon className="text-amk-red w-6 h-6" /> @amk.saja
+              </p>
+            </a>
             
             <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Belo+Horizonte,+828,+Jardim+das+Laranjeiras,+Foz+do+Iguaçu+-+PR" 
               target="_blank" 
