@@ -146,11 +146,10 @@ function App() {
         <h2 className="font-heading font-bold text-3xl md:text-4xl text-amk-white mb-12 border-b-4 border-amk-red inline-block pb-2 uppercase">
           Nossas Modalidades
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {[
-            { title: "Sipalki", text: "É uma arte marcial coreana milenar de origem militar, focada no combate real e na defesa pessoal. Envolve tanto o uso desarmado do corpo quanto o arsenal de armas." },
-            { title: "Kwon Bop", text: "É um sistema coreano de artes marciais desarmadas. Influenciando fortemente o desenvolvimento moderno do Taekwondo." },
-            { title: "Gumkido", text: "É uma arte marcial coreana focada no manejo de espadas. Seu foco principal é o combate contra múltiplos oponentes, enfatizando movimentos dinâmicos, fluidez, meditação e saúde física e mental." }
+            { title: "Sipalki", text: "É uma arte marcial coreana milenar de origem militar, focada no combate real e na defesa pessoal." },
+            { title: "Kwon Bop", text: "É um sistema coreano de artes marciais desarmadas. Influenciando fortemente o desenvolvimento moderno do Taekwondo." },            
           ].map((item, idx) => (
             <div key={idx} className="bg-amk-surface p-8 rounded-lg text-center flex flex-col">
               <h3 className="font-heading text-xl text-amk-red mb-4 uppercase">{item.title}</h3>
@@ -218,59 +217,51 @@ function App() {
             <thead>
               <tr className="bg-amk-red text-amk-white font-heading text-lg whitespace-nowrap">
                 <th className="p-5">Dia da Semana</th>
+                <th className="p-5">Sipalki AMK</th>
                 <th className="p-5">Kwon Bop</th>
-                <th className="p-5">Sipalki-Do</th>
-                <th className="p-5">Gumkido</th>
+                <th className="p-5">Sipalki Inclusão</th>
               </tr>
             </thead>
-            <tbody className="text-lg">
+            <tbody className="text-lg text-amk-white">
               
               {/* Segunda-feira */}
               <tr className="border-b border-gray-800">
                 <td className="p-5">Segunda-feira</td>
+                <td className="p-5 text-amk-red font-bold">10:00 / 19:00</td>
                 <td className="p-5 text-gray-600">-</td>
-                <td className="p-5 text-amk-red font-bold">19:00</td>
-                <td className="p-5 text-gray-600">-</td>
+                <td className="p-5">09:00 (Adulto) <br/><span className="text-sm text-gray-400">18:00 (Infantil)</span></td>
               </tr>
 
               {/* Terça-feira */}
               <tr className="bg-[#111] border-b border-gray-800">
                 <td className="p-5">Terça-feira</td>
-                <td className="p-5">19:00</td>
-                <td className="p-5 text-amk-red font-bold">19:00 / 20:00</td>
-                <td className="p-5">21:00</td>
+                <td className="p-5 text-gray-600">-</td>
+                <td className="p-5 text-amk-red font-bold">19:00</td>
+                <td className="p-5 text-gray-600">-</td>
               </tr>
 
               {/* Quarta-feira */}
               <tr className="border-b border-gray-800">
                 <td className="p-5">Quarta-feira</td>
+                <td className="p-5 text-amk-red font-bold">10:00 / 19:00</td>
                 <td className="p-5 text-gray-600">-</td>
-                <td className="p-5 text-amk-red font-bold">19:00</td>
-                <td className="p-5 text-gray-600">-</td>
+                <td className="p-5">09:00 (Adulto) <br/><span className="text-sm text-gray-400">18:00 (Infantil)</span></td>
               </tr>
 
               {/* Quinta-feira */}
               <tr className="bg-[#111] border-b border-gray-800">
                 <td className="p-5">Quinta-feira</td>
-                <td className="p-5">19:00</td>
-                <td className="p-5 text-amk-red font-bold">19:00 / 20:00</td>
-                <td className="p-5">21:00</td>
-              </tr>
-
-              {/* Sexta-feira */}
-              <tr className="border-b border-gray-800">
-                <td className="p-5">Sexta-feira</td>
                 <td className="p-5 text-gray-600">-</td>
                 <td className="p-5 text-amk-red font-bold">19:00</td>
                 <td className="p-5 text-gray-600">-</td>
               </tr>
 
-              {/* Sábado */}
-              <tr className="bg-[#111] border-b border-gray-800">
-                <td className="p-5">Sábado</td>
-                <td className="p-5">16:00</td>
-                <td className="p-5 text-amk-red font-bold">17:00</td>
-                <td className="p-5">18:00</td>
+              {/* Sexta-feira */}
+              <tr className="border-b border-gray-800">
+                <td className="p-5">Sexta-feira</td>
+                <td className="p-5 text-amk-red font-bold">10:00 / 19:00</td>
+                <td className="p-5 text-gray-600">-</td>
+                <td className="p-5">09:00 (Adulto) <br/><span className="text-sm text-gray-400">18:00 (Infantil)</span></td>
               </tr>
 
             </tbody>
